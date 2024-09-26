@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function loadGame(gameId) {
         localStorage.setItem('currentGameId', gameId);
-        window.location.href = 'gameboard.html';
+        window.location.href = 'gamePlay.html';
     }
 
     function deleteGame(gameId) {

@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Score Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="backArrow">
+        <a href="index.html">←</a>
+    </div>
+
+    <div id="teamNames">
+        <div>
+            <input type="text" id="teamOne" placeholder="Team One Name">
+            <input type="text" id="teamTwo" placeholder="Team Two Name">
+            <div id="categoryDropdown" class="dropdown">
+                <input type="text" id="categoryInput" placeholder="Put Category Here" readonly>
+                <button id="categoryButton">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </button>
+                <ul id="categoryList" class="dropdown-content">
+                    <!-- Categories will be populated here by JavaScript -->
+                </ul>
+            </div>
+            <button id="buttonSubmit">Submit</button>
+        </div>
+    </div>
+
+    <div id="appContainer">
+        <div id="firstHalfContainer">
+            <div id="firstPlayerContainer">
+                <div id="firstPlayer"></div>
+                <div id="scoreOne" class="score-button"></div>
+            </div>
+            <div id="buttonDivOne"></div>
+        </div>
+
+        <div id="resetDiv">
+            <button id="resetButton">Reset</button>
+        </div>
+
+        <div id="secondHalfContainer">
+            <div id="buttonDivTwo"></div>
+            <div id="secondPlayerContainer">
+                <div id="secondPlayer"></div>
+                <div id="scoreTwo" class="score-button"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="noteModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <textarea id="noteText" placeholder="Enter your note here"></textarea>
+            <button id="saveNote">Save Note</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

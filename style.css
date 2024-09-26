@@ -1,0 +1,400 @@
+/* Base styles */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+/* Button styles */
+.buttonsOne, .buttonsTwo {
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    position: relative;
+    margin: 0 15px;
+    background-color: rgb(240, 240, 240);
+    border: none;
+    cursor: pointer;
+}
+
+#resetButton {
+    width: 80px;
+    height: 80px;
+    font-size: 16px;
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+
+.refresh-button {
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+/* Container styles */
+#firstHalfContainer, #secondHalfContainer {
+    height: 35vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#resetDiv {
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#buttonDivOne, #buttonDivTwo {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+#teamNames {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    height: 100vh;
+    background-color: rgb(250, 250, 250);
+}
+
+#categoryDropdown {
+    width: 100%;
+}
+
+#teamNames input {
+    margin: 0 0 20px 0;
+    height: 35px;
+    border-radius: 20px;
+    text-align: center;
+    border-color: black;
+}
+
+#appContainer {
+    text-align: center;
+}
+
+#firstPlayerContainer, #secondPlayerContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    height: 50px;
+}
+
+#firstPlayer, #secondPlayer {
+    margin: 0 10px;
+    font-size: 24px;
+    background-color: black;
+    padding: 0 30px;
+    color: white;
+    border-radius: 25px;
+    display: inline-flex;
+    align-items: center;
+    height: 100%;
+}
+
+.score-button {
+    font-size: 24px;
+    background-color: aqua;
+    color: black;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    margin: 0 10px;
+}
+
+#buttonSubmit {
+    height: 35px;
+    border-radius: 35px;
+    background-color: black;
+    color: white;
+}
+
+/* Note cloud styles */
+.note-cloud {
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    padding: 3px 5px;
+    font-size: 10px;
+    cursor: pointer;
+    max-width: 80px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    pointer-events: auto;
+    z-index: 10;
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#noteText {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+#saveNote {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/* Dropdown styles */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+#categoryInput {
+    width: calc(100% - 40px);
+    height: 40px;
+    border: 2px solid #ccc;
+    border-radius: 20px;
+    padding: 0 15px;
+    font-size: 14px;
+    background-color: white;
+    cursor: pointer;
+}
+
+#categoryButton {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 35px;
+    height: 35px;
+    background-color: #00ffff;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    margin: 2px 8px;
+}
+
+#categoryButton svg {
+    width: 20px;
+    height: 20px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 100%;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    max-height: 200px;
+    overflow-y: auto;
+    border-radius: 20px;
+    width: 250px;
+    padding: 0;
+}
+
+.dropdown-content li {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+}
+
+.dropdown-content li:hover {
+    background-color: #f1f1f1;
+}
+
+.show {
+    display: block;
+}
+
+/* Gameboard styles */
+#gameboardContainer {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#createNewSection {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#createNewSection span {
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.aqua-button {
+    background-color: aqua;
+    color: black;
+    text-decoration: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#categoryTabs {
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    margin-bottom: 20px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+#categoryTabs::-webkit-scrollbar {
+    display: none;
+}
+
+.tab-wrapper {
+    display: inline-flex;
+    gap: 10px;
+    padding-bottom: 10px;
+}
+
+.tab {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    transition: 0.3s;
+    font-size: 14px;
+    border-radius: 20px;
+}
+
+.tab:hover {
+    background-color: rgba(0, 255, 255, 0.1);
+}
+
+.tab.active {
+    background-color: rgba(0, 255, 255, 0.2);
+    font-weight: bold;
+}
+
+#gameList {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.gameItem {
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    border-radius: 9999px;
+    cursor: pointer;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    user-select: none;
+    touch-action: pan-y;
+}
+
+.gameItem:hover {
+    background-color: #444;
+}
+
+#backArrow {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 24px;
+}
+
+#backArrow a {
+    text-decoration: none;
+    color: #000;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    #teamNames div {
+        display: flex;
+        flex-direction: column;
+        width: 250px;
+    }
+
+    #categoryDropdown {
+        margin-bottom: 0px;
+    }
+    
+    .buttonsOne, .buttonsTwo {
+        margin: 0 10px;
+    }
+    
+    #firstPlayer, #secondPlayer {
+        font-size: 18px;
+        padding: 0 20px;
+    }
+    
+    .score-button {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+}
